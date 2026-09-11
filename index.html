@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dylan Felipe Puentes Montero — Fullstack Developer & Data Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+
+<body>
+  <canvas id="webgl-canvas"></canvas>
+  <header class="navbar-glass">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <span class="mono">&lt;DFPM</span><span class="accent-dot">.</span><span class="mono">dev&gt;</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#sobre-mi">¿Quien es Dylan?</a></li>
+          <li><a href="#experiencia">Trayectoria</a></li>
+          <li><a href="#proyectos">Portafolio</a></li>
+          <li><a href="#cv-resumen">CV &amp; Educación</a></li>
+          <li><a href="#habilidades">Aptitudes</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contacto" class="btn-glow-sm">Contacto</a>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="hero-container">
+    <div class="hero-grid">
+      <div class="hero-text-side">
+        <div class="availability-badge">
+          <span class="pulsing-sphere"></span>
+          <span>Disponible para nuevos retos</span>
+        </div>
+        <h1 class="hero-title">
+          Dylan Felipe<br>
+          <span class="gradient-text">Puentes Montero</span>
+        </h1>
+        <p class="hero-subtitle">
+          Transformo desafíos complejos en soluciones robustas, escalables y orientadas a resultados medibles.
+        </p>
+
+        <!-- Enlaces directos -->
+        <div class="hero-cta-group">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dfelipe.puentes@gmail.com&su=Contacto%20desde%20Portafolio"
+            target="_blank" rel="noopener noreferrer" class="btn-magnetic-primary">
+            Escríbeme
+          </a>
+          <a href="#proyectos" class="btn-magnetic-ghost">Ver Proyectos</a>
+        </div>
+
+        <div class="social-channels">
+          <a href="https://github.com/Dylanfelipe01" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/dylanpuentes-dev/" target="_blank" rel="noopener noreferrer"
+            class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <div class="meta-strip">
+          <span><i class="icon-geo"></i> Bogotá, Colombia</span>
+          <span><i class="icon-phone"></i> 319 640 5145</span>
+        </div>
+      </div>
+
+      <!-- Parte de la foto -->
+      <div class="hero-card-side">
+        <div class="holo-card" data-tilt data-tilt-max="12" data-tilt-glare data-tilt-max-glare="0.3">
+          <div class="holo-scanner"></div>
+          <div class="photo-wrapper">
+            <!-- Slot oficial para tu fotografía -->
+            <img src="foto-dylan.jpg" alt="Dylan Felipe Puentes Montero" class="profile-img"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%2310203a\'><circle cx=\'50\' cy=\'50\' r=\'50\'/><text x=\'50\' y=\'57\' fill=\'%2300f2fe\' font-size=\'26\' font-weight=\'bold\' text-anchor=\'middle\' font-family=\'sans-serif\'>DYLAN</text></svg>'">
+            <div class="photo-glow"></div>
+          </div>
+          <div class="holo-meta">
+            <span class="mono-label">PERFIL VERIFICADO</span>
+
+            <p class="role-caption">Java | JavaScript | HTML | CSS | PostgreSQL | POO | Git | GitHub</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logros -->
+  <section class="stats-ribbon">
+    <div class="stats-container">
+      <div class="stat-cell" data-tilt>
+        <span class="stat-digit" data-count="5000" data-suffix="+">0</span>
+        <span class="stat-desc">Registros mensuales procesados con 100% de precisión</span>
+      </div>
+      <div class="stat-cell" data-tilt>
+        <span class="stat-digit" data-count="1400" data-prefix="" data-suffix="">0</span>
+        <span class="stat-desc">Horas automatizadas gestionadas sin incidencias</span>
+      </div>
+      <div class="stat-cell" data-tilt>
+        <span class="stat-digit" data-count="120" data-suffix="%">0</span>
+        <span class="stat-desc">Reducción de tiempos de consulta en sistemas bancarios</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="content-wrapper">
+
+    <!-- Acerca de Mí  -->
+    <section id="sobre-mi" class="section-reveal">
+      <div class="section-title-wrap">
+        <span class="mono-tag"></span>
+        <h2>Acerca de mí</h2>
+      </div>
+      <div class="glass-panel" data-tilt data-tilt-max="4">
+        <p class="lead-text mb-3">
+          Mi camino en la tecnología nació de una curiosidad constante por entender cómo los datos y la lógica mueven al
+          mundo real. Actualmente curso una doble titulación en Ingeniería de Sistemas y Ciencia de Datos, un cruce
+          disciplinario que me permite abordar el desarrollo no solo desde el código, sino desde el impacto
+          del dato en el negocio.
+
+        </p>
+
+        Mi paso por el sector financiero y la gestión contable transformó por completo mi forma de programar, me
+        enseñó rigor analítico, minuciosidad con los números y una comprensión profunda de las necesidades operativas
+        de una empresa. Esa base es la que hoy aplico al diseñar arquitecturas en el ecosistema Java.
+
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section id="experiencia" class="section-reveal">
+      <div class="section-title-wrap">
+        <span class="mono-tag"></span>
+        <h2>Experiencia Profesional Relevante</h2>
+      </div>
+      <div class="timeline-tree">
+
+        <!-- Banco de Occidente -->
+        <article class="timeline-branch" data-tilt data-tilt-max="5">
+          <div class="branch-card">
+            <div class="branch-top">
+              <div>
+                <h3>Auxiliar Mesa de Control SAES</h3>
+                <span class="entity">Banco de Occidente · Bogotá, Colombia</span>
+              </div>
+              <span class="chronos">Julio 2024 – Junio 2026</span>
+            </div>
+            <ul class="custom-checks">
+              <li>Lideré la gestión, análisis y conciliación de más de <strong>5,000 registros contables
+                  mensuales</strong> mediante modelos avanzados de Excel, alcanzando un <strong>100% de consistencia de
+                  datos</strong> para la toma de decisiones gerenciales.</li>
+              <li>Supervisé y ejecuté la dispersión tributaria de más de <strong>$500 millones mensuales</strong>,
+                asegurando trazabilidad operativa total y reduciendo al mínimo las incidencias por errores
+                operativos.</li>
+              <li>Reestructuré flujos de trabajo en plataformas bancarias internas corporativas, reduciendo en un
+                <strong>70% los tiempos de consulta y validación</strong> (equivalente a unas 1,500 horas de
+                optimización operativa).
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- BBVA -->
+        <article class="timeline-branch" data-tilt data-tilt-max="5">
+          <div class="branch-card">
+            <div class="branch-top">
+              <div>
+                <h3>Prácticas para Técnico</h3>
+                <span class="entity">BBVA · Bogotá, Colombia</span>
+              </div>
+              <span class="chronos">Febrero 2023 – Julio 2023</span>
+            </div>
+            <ul class="custom-checks">
+              <li>Administré y validé flujos de información financiera en plataformas fiduciarias especializadas,
+                salvaguardando la integridad y disponibilidad inmediata de la información.</li>
+              <li>Utilicé e integré herramientas corporativas digitales para auditoría y procesamiento de solicitudes,
+                adaptándome con agilidad a estrictas normas de seguridad bancaria.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="section-reveal">
+      <div class="section-title-wrap">
+        <span class="mono-tag"></span>
+        <h2>Portafolio de Soluciones</h2>
+      </div>
+      <div class="cards-grid">
+
+        <!-- Proyecto 1: grupal -->
+        <article class="interactive-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="card-edge"></div>
+          <div class="project-media-mockup">
+            <div class="code-header">
+              <span class="circle-dot"></span><span class="circle-dot"></span><span class="circle-dot"></span>
+              <span class="mock-title">Cancheros.java</span>
+            </div>
+            <pre><code>const formCancha = document.getElementById("formCancha");
+const tablaCanchas = document.getElementById("tablaCanchas");
+const salirbtn = document.getElementById("salirbtn");
+
+salirbtn.addEventListener"click", () => 
+    localStorage.removeItem("currentUser")
+    window.location.href = "./inicio-sesion.html"</code></pre>
+          </div>
+          <span class="badge-tech">Proyecto Grupal • Pagina de reservas</span>
+          <h3>Pagina de reservas de canchas</h3>
+          <p>
+            <strong>Propósito &amp; Problema:</strong> Aplicación web full-stack colaborativa diseñada para optimizar la administración y reserva de espacios deportivos en tiempo real. Integra una arquitectura modular con backend robusto en Spring Boot para la exposición de APIs RESTful seguras, mapeo relacional con JPA/Hibernate y base de datos relacional PostgreSQL con restricciones de integridad y consultas complejas. El frontend ofrece una interfaz fluida y responsiva orientada a la experiencia del usuario.
+          </p>
+         
+          <div class="pills mb-3">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>PostSQL</span>
+            <span>Spring Data</span>
+            <span>Java Script</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Boostrap</span>
+            <span>Git/GitHub</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Dylanfelipe01/Cancheros_Proyecto.git" target="_blank" rel="noopener noreferrer" class="btn-card-link">
+              <i class="bi bi-github"></i> Ver Código Fuente
+            </a>
+            <a href="#contacto" class="btn-card-link outline">
+              <i class="bi bi-play-circle"></i> Solicitar Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Unity / C# -->
+        <article class="interactive-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="card-edge"></div>
+          <div class="project-media-mockup">
+            <div class="code-header">
+              <span class="circle-dot"></span><span class="circle-dot"></span><span class="circle-dot"></span>
+              <span class="mock-title">PlanificadorController.css</span>
+            </div>
+            <pre><code>
+background: url('../img/fondo.png') 
+background-size: cover !important;
+color: #f1e9d2;
+font-family: 'Rajdhani', sans-serif !important;
+font-weight: 600;
+            </code></pre>
+          </div>
+          <span class="badge-tech">Proyecto personal • Planificador interactivo</span>
+          <h3>Planificador de tareas</h3>
+          <p>
+            <strong>Propósito &amp; Problema:</strong> Aplicación web interactiva para la gestión de tareas diarias inspirada en la interfaz retro de GTA: San Andreas. Implementa un CRUD completo con filtrado dinámico por estado (pendiente, en progreso, completada), edición en tiempo real y persistencia local mediante LocalStorage.
+          </p>       
+          <div class="pills mb-3">
+            <span>HTML5</span>
+            <span>CSS3</span>            
+            <span>Java Script</span>
+            <span>GitHub pages</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Dylanfelipe01/Proyecto_individual_Dylan_Puentes.git" target="_blank" rel="noopener noreferrer" class="btn-card-link">
+              <i class="bi bi-github"></i> Ver Código Fuente
+            </a>
+            <a href="#contacto" class="btn-card-link outline">
+              <i class="bi bi-play-circle"></i> Solicitar Demo
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Resumen de CV -->
+    <section id="cv-resumen" class="section-reveal">
+      <div class="section-title-wrap">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+          <div>
+            <span class="mono-tag"></span>
+            <h2>Educación &amp; Logros Académicos</h2>
+          </div>
+
+          <!-- Descarga directa de CV según rúbrica -->
+          <a href="CV_Dylan_Puentes.pdf" download="CV_Dylan_Puentes.pdf" class="btn-download-cv">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            Descargar CV Completo
+          </a>
+        </div>
+      </div>
+
+      <div class="edu-mesh">
+        <div class="edu-node" data-tilt>
+          <span class="edu-date">Junio 2026 – Actualidad</span>
+          <h4>Desarrollador Full Stack Java</h4>
+          <p class="inst">Generation Colombia · Bogotá</p>
+          <p class="edu-impact">
+            <strong>Aplicación Práctica:</strong> Aplicacion de arquitecturas backend seguras, programación
+            orientada a objetos (POO), bases de datos y trabajo colaborativo bajo metodologías ágiles Scrum.
+          </p>
+        </div>
+
+        <div class="edu-node" data-tilt>
+          <span class="edu-date">Enero 2024 – Actualidad</span>
+          <h4>Ingeniería en Ciencia de Datos</h4>
+          <p class="inst">Politécnico Grancolombiano · Bogotá</p>
+          <p class="edu-impact">
+            <strong>Aplicación Práctica:</strong> Aplicación de estadística matemática y modelos predictivos para la
+            automatización y auditoría masiva de datos financieros.
+          </p>
+        </div>
+
+        <div class="edu-node" data-tilt>
+          <span class="edu-date">Enero 2024 – Actualidad</span>
+          <h4>Ingeniería de Sistemas</h4>
+          <p class="inst">Politécnico Grancolombiano · Bogotá</p>
+          <p class="edu-impact">
+            <strong>Aplicación Práctica:</strong> Análisis y diseño de estructuras de datos complejas, redes lógicas y
+            principios de computación sólida.
+          </p>
+        </div>
+
+        <div class="edu-node" data-tilt>
+          <span class="edu-date">Septiembre 2023 – Diciembre 2023</span>
+          <h4>Diplomado en Programación Básica de Videojuegos</h4>
+          <p class="inst">Universidad Nacional de Colombia · Bogotá</p>
+          <p class="edu-impact">
+            <strong>Aplicación Práctica:</strong> Modelado matemático en C# y control de rendimiento gráfico en tiempo
+            real mediante Unity.
+          </p>
+        </div>
+
+        <div class="edu-node" data-tilt>
+          <span class="edu-date">Julio 2022 – Agosto 2023</span>
+          <h4>Técnico en Servicios y Operaciones Microfinancieras</h4>
+          <p class="inst">SENA · Bogotá</p>
+          <p class="edu-impact">
+            <strong>Aplicación Práctica:</strong> Base de mi pensamiento analítico, gestión contable y visión de negocio
+            aplicados a plataformas financieras.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades Técnicas y de Comportamiento -->
+    <section id="habilidades" class="section-reveal">
+      <div class="section-title-wrap">
+        <span class="mono-tag"></span>
+        <h2>Habilidades Técnicas &amp; de Comportamiento</h2>
+      </div>
+      <div class="skills-interactive-box glass-panel">
+
+        <div>
+          <h4 class="mb-3 text-cyan">Habilidades Técnicas (Hard Skills)</h4>
+          <div class="stack-cluster mb-4">
+            <span class="tech-chip">Java</span>
+            <span class="tech-chip">JavaScript</span>
+            <span class="tech-chip">POO </span>
+            <span class="tech-chip">PostgreSQL</span>
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">HTML5 / CSS3</span>
+            <span class="tech-chip">Git / GitHub</span>
+            <span class="tech-chip">Power BI</span>
+            <span class="tech-chip">Excel Analítico</span>
+            <span class="tech-chip">VS Code</span>
+          </div>
+
+          <h4 class="mb-3 text-cyan">Habilidades de Comportamiento (Soft Skills)</h4>
+          <div class="stack-cluster">
+            <span class="tech-chip soft">Pensamiento Analítico</span>
+            <span class="tech-chip soft">Atención al Detalle</span>
+            <span class="tech-chip soft">Liderazgo &amp; Visión de Negocio</span>
+            <span class="tech-chip soft">Scrum / Trabajo en Equipo</span>
+            <span class="tech-chip soft">Resiliencia &amp; Mentalidad de Crecimiento</span>
+            <span class="tech-chip soft">Comunicación Asertiva</span>
+          </div>
+        </div>
+
+        <div class="lang-cluster">
+          <h4 class="text-cyan mb-3">Idiomas</h4>
+          <div class="lang-row">
+            <span class="tech-chip soft">Español nativo</span>
+          </div>
+          <div class="lang-row">
+            <span class="tech-chip soft">Ingles B2.2 profesional</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección de Blog  -->
+    <section id="blog" class="section-reveal">
+      <div class="section-title-wrap">
+        <span class="mono-tag"></span>
+        <h2>Blog &amp; Publicaciones Técnicas</h2>
+      </div>
+      <div class="blog-grid">
+
+        <article class="blog-card glass-panel" data-tilt data-tilt-max="4">
+          <span class="mono-label text-cyan">JAVA ECOSYSTEM • TUTORIAL</span>
+          <h3>Buenas prácticas en el uso de POO para aplicaciones escalables</h3>
+          <p>
+            Una revisión detallada de cómo evitar el código espagueti implementando principios SOLID, inyección de
+            dependencias y encapsulamiento estricto en aplicaciones Java modernas.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="mono small text-soft">Lectura: 5 min</span>
+            <a href="https://inside-java.translate.goog/2025/01/29/evolution-of-java-ecosystem-for-integrating-ai/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
+              class="link-cyan">Leer artículo →</a>
+          </div>
+        </article>
+
+        <article class="blog-card glass-panel" data-tilt data-tilt-max="4">
+          <span class="mono-label text-cyan">ANALÍTICA &amp; FINANZAS • GUÍA</span>
+          <h3>Automatización de conciliaciones contables masivas</h3>
+          <p>
+            Estrategias y patrones que apliqué en el sector financiero para reducir incidencias operativas y garantizar
+            precisión total sobre más de 5,000 transacciones mensuales.
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="mono small text-soft">Lectura: 4 min</span>
+            <a href="https://www.embat.io/es/blog/la-automatizacion-en-la-conciliacion-de-plataformas-de-cobro-y-pago"
+              class="link-cyan">Leer artículo →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contacto Directo -->
+    <section id="contacto" class="section-reveal">
+      <div class="section-title-wrap text-center mb-5">
+        <span class="mono-tag"></span>
+        <h2 class="display-6 fw-bold text-white">¿Listo para construir el siguiente nivel?</h2>
+        <p class="lead-text mx-auto" style="max-width: 650px;">
+          Disponible para aportar nuevas ideas en equipos de alto rendimiento.
+        </p>
+      </div>
+
+      <div class="contact-dual-grid">
+
+        <!-- Columna 1: Canales y Datos Rápidos -->
+        <div class="contact-info-panel glass-panel" data-tilt data-tilt-max="4">
+          <h3 class="panel-subtitle mb-4">Hablemos de tu vacante o proyecto</h3>
+
+          <div class="contact-methods">
+            <div class="method-card">
+              <div class="method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Correo Electrónico</span>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dfelipe.puentes@gmail.com&su=Propuesta%20de%20Proyecto"
+                  target="_blank" rel="noopener noreferrer" class="method-link">
+                  dfelipe.puentes@gmail.com
+                </a>
+              </div>
+              <button class="btn-copy-mail" onclick="copyEmail(this)" title="Copiar correo">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Teléfono / WhatsApp -->
+            <div class="method-card">
+              <div class="method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Llamada / WhatsApp</span>
+                <a href="https://wa.me/573196405145" target="_blank" rel="noopener noreferrer" class="method-link">
+                  +57 319 640 5145
+                </a>
+              </div>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="method-card">
+              <div class="method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Ubicación Actual</span>
+                <span class="method-text">Bogotá, Colombia (Disponible Remoto/Híbrido)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-status-chip mt-4">
+            <span class="status-pulse-cyan"></span>
+            <span>Respuesta promedio: Menos de 24 horas</span>
+          </div>
+        </div>
+
+        <!-- Columna 2: Redacción Directa de Mensaje -->
+        <div class="contact-form-panel glass-panel" data-tilt data-tilt-max="4">
+          <form class="custom-contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-group mb-3">
+              <label for="c-name" class="mono-label mb-1">Nombre o Empresa</label>
+              <input type="text" id="c-name" class="terminal-input" placeholder="..." required>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="c-subject" class="mono-label mb-1">Motivo</label>
+              <input type="text" id="c-subject" class="terminal-input" placeholder="..." required>
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="c-msg" class="mono-label mb-1">Mensaje</label>
+              <textarea id="c-msg" rows="4" class="terminal-input"
+                placeholder="Cuéntame brevemente sobre tu equipo o proyecto..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-magnetic-primary w-100">
+              <span>Enviar vía Gmail</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="ms-1">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="cyber-footer">
+    <p>© 2026 Dylan Felipe Puentes Montero — Desarrollador Fullstack</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
