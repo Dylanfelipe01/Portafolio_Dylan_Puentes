@@ -1,6 +1,3 @@
-// ==========================================
-// 1. THREE.JS: FONDO INTERACTIVO DE RED
-// ==========================================
 const canvas = document.getElementById('webgl-canvas');
 const scene = new THREE.Scene();
 
@@ -62,9 +59,7 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// ==========================================
-// 2. GSAP SCROLLTRIGGERS
-// ==========================================
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Entrada hero
@@ -90,9 +85,6 @@ gsap.utils.toArray('.section-reveal').forEach((sec) => {
   });
 });
 
-// ==========================================
-// 3. CONTADORES DE IMPACTO CUANTITATIVO
-// ==========================================
 const statDigits = document.querySelectorAll('.stat-digit');
 
 statDigits.forEach((digit) => {
