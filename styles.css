@@ -925,3 +925,60 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* Nuevo Logo de Firma Personalizada */
+.signature-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  font-size: 1.3rem;
+  color: var(--text-pure);
+}
+
+/* 1. Reducción en la altura de los botones del Hero */
+.btn-magnetic-primary {
+  padding: 0.65rem 1.8rem; /* Reducido de 0.85rem 2rem */
+  /* El resto de propiedades se mantienen igual */
+}
+.btn-magnetic-ghost {
+  padding: 0.65rem 1.8rem; /* Reducido de 0.85rem 2rem */
+  /* El resto de propiedades se mantienen igual */
+}
+
+/* 2. Reducción de los botones GitHub y LinkedIn para no competir */
+.social-btn {
+  padding: 0.35rem 0.8rem; /* Reducido */
+  font-size: 0.75rem; /* Reducido de 0.85rem */
+}
+
+/* 3. Estilos para la imagen de previsualización del portafolio (Reemplaza el código anterior) */
+.project-preview-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: #080d1a;
+  border: 1px solid var(--panel-border);
+}
+
+.project-preview-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.interactive-card:hover .project-preview-img img {
+  transform: scale(1.05); /* Da un leve acercamiento al pasar el ratón */
+}
+
+/* 4. Ajuste final del espacio del Footer */
+.cyber-footer {
+  text-align: center;
+  padding: 1.5rem 1rem 3rem 1rem; /* Padding superior reducido */
+  border-top: 1px solid var(--panel-border);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
